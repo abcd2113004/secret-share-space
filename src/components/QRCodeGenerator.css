@@ -1,26 +1,33 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 .qr-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 .qr-modal {
-  background: white;
-  border-radius: 20px;
-  padding: 32px;
-  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  padding: 28px;
+  max-width: 480px;
   width: 100%;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 193, 7, 0.1);
   animation: modalIn 0.3s ease-out;
 }
 
@@ -39,38 +46,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2);
 }
 
 .qr-header h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #ffc107;
   margin: 0;
 }
 
 .close-btn {
   background: none;
   border: none;
-  font-size: 1.5rem;
-  color: #64748b;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 4px 6px;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 .close-btn:hover {
-  background: rgba(148, 163, 184, 0.1);
-  color: #374151;
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
 }
 
 .qr-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .qr-code-section {
@@ -79,102 +86,104 @@
 
 .qr-code-container {
   display: inline-block;
-  padding: 16px;
+  padding: 12px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
 }
 
 .qr-code {
-  width: 200px;
-  height: 200px;
-  border-radius: 8px;
+  width: 180px;
+  height: 180px;
+  border-radius: 6px;
 }
 
 .qr-description {
-  color: #64748b;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
   margin: 0;
+  font-size: 0.9rem;
 }
 
 .access-methods {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .method {
-  background: rgba(102, 126, 234, 0.05);
-  padding: 20px;
-  border-radius: 12px;
+  background: rgba(255, 193, 7, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 193, 7, 0.2);
 }
 
 .method-label {
   display: block;
   font-weight: 600;
-  color: #374151;
-  margin-bottom: 8px;
-  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 6px;
+  font-size: 0.8rem;
 }
 
 .method-value {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .code-display {
   font-family: 'Monaco', 'Menlo', monospace;
-  background: white;
-  padding: 8px 12px;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 4px;
   font-weight: 700;
-  letter-spacing: 2px;
-  color: #667eea;
-  border: 2px solid rgba(102, 126, 234, 0.2);
-  font-size: 1.125rem;
+  letter-spacing: 1px;
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  font-size: 1rem;
 }
 
 .link-display {
   flex: 1;
-  background: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  color: #475569;
-  border: 2px solid rgba(148, 163, 184, 0.2);
-  font-size: 0.875rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  font-size: 0.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .copy-method-btn {
-  padding: 8px 16px;
-  background: #667eea;
-  color: white;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #ffc107, #ffeb3b);
+  color: #000;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 .copy-method-btn:hover {
-  background: #5a67d8;
+  background: linear-gradient(135deg, #ffca28, #fff176);
   transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {
   .qr-modal {
     margin: 20px;
-    padding: 24px;
+    padding: 20px;
   }
   
   .qr-code {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   }
   
   .method-value {

@@ -1,190 +1,198 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 .active-room-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 .room-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  padding: 24px 32px;
+  padding: 20px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2);
 }
 
 .room-info h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 12px 0;
+  color: #ffc107;
+  margin: 0 0 10px 0;
 }
 
 .room-details {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   align-items: center;
 }
 
 .detail-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
+  gap: 6px;
+  font-size: 0.8rem;
 }
 
 .detail-label {
-  color: #64748b;
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 500;
 }
 
 .room-code {
   font-family: 'Monaco', 'Menlo', monospace;
-  background: rgba(102, 126, 234, 0.1);
-  padding: 4px 8px;
-  border-radius: 6px;
+  background: rgba(255, 193, 7, 0.15);
+  padding: 3px 6px;
+  border-radius: 4px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #667eea;
+  color: #ffc107;
+  font-size: 0.8rem;
 }
 
 .copy-btn {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 3px 6px;
+  border-radius: 3px;
   transition: all 0.2s ease;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .copy-btn:hover {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
 }
 
 .copy-btn.copied {
-  color: #10b981;
+  color: #4caf50;
 }
 
 .time-remaining {
   font-weight: 600;
-  color: #059669;
+  color: #4caf50;
 }
 
 .time-remaining.expired {
-  color: #dc2626;
+  color: #f44336;
 }
 
 .room-actions {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
 }
 
 .action-btn {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  border: 2px solid rgba(148, 163, 184, 0.3);
-  background: white;
-  color: #475569;
-  border-radius: 8px;
+  gap: 5px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 .action-btn:hover {
-  border-color: #667eea;
-  background: rgba(102, 126, 234, 0.05);
+  border-color: #ffc107;
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
 }
 
 .action-btn.copied {
-  border-color: #10b981;
-  color: #10b981;
-  background: rgba(16, 185, 129, 0.05);
+  border-color: #4caf50;
+  color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
 }
 
 .leave-btn {
-  padding: 10px 20px;
-  background: #ef4444;
+  padding: 8px 16px;
+  background: #f44336;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 .leave-btn:hover {
-  background: #dc2626;
+  background: #d32f2f;
   transform: translateY(-1px);
 }
 
 .room-content {
-  padding: 32px;
+  padding: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .tab-navigation {
   display: flex;
-  gap: 4px;
-  margin-bottom: 24px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px;
-  border-radius: 12px;
+  gap: 3px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  border-radius: 8px;
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 193, 7, 0.1);
 }
 
 .tab-btn {
   flex: 1;
-  padding: 12px 24px;
+  padding: 10px 20px;
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .tab-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: rgba(255, 193, 7, 0.1);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .tab-btn.active {
-  background: rgba(255, 255, 255, 0.95);
-  color: #374151;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffc107, #ffeb3b);
+  color: #000;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
 }
 
 .tab-content {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  border-radius: 16px;
-  padding: 32px;
-  min-height: 500px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  padding: 24px;
+  min-height: 480px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .room-header {
     flex-direction: column;
-    gap: 16px;
-    padding: 20px;
+    gap: 12px;
+    padding: 16px;
   }
   
   .room-details {
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     align-items: flex-start;
   }
   
@@ -194,10 +202,10 @@
   }
   
   .room-content {
-    padding: 20px;
+    padding: 16px;
   }
   
   .tab-content {
-    padding: 24px 20px;
+    padding: 20px 16px;
   }
 }
